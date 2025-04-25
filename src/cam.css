@@ -1,0 +1,58 @@
+.cam-container {
+    position: relative;
+    background-image: url('bg-with-logo.png');
+    /* Replace with your custom image path */
+    background-size: 100%;
+    /* Scale the image to 45% */
+    background-position: center calc(50% + 1cm);
+    /* Center the image */
+}
+
+.left-button,
+.right-button {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 20px 40px;
+    font-size: 20px;
+}
+
+.left-button:hover,
+.right-button:hover {
+    background-color: #005f75;
+}
+
+/* Đảm bảo canvas và video nằm giữa màn hình */
+.container {
+    display: flex;
+    flex-direction: column;
+    /* Sắp xếp theo cột */
+    justify-content: center;
+    /* Căn giữa theo chiều dọc */
+    align-items: center;
+    /* Căn giữa theo chiều ngang */
+    height: 100vh;
+    /* Chiều cao 100% màn hình */
+}
+
+/* Video và Canvas */
+canvas {
+    transform: scaleX(-1);
+    /* Mirror effect */
+    border: 1px solid #ccc;
+    /* Viền canvas để dễ quan sát */
+    border-radius: 30px;
+}
+
+/* Đoạn text cameraHeightAdjustment */
+.adjustment-text {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    /* Căn giữa đoạn text */
+}
