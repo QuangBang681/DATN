@@ -217,6 +217,7 @@
     border-radius: 30px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.7);
     background: linear-gradient(145deg, #e0e0e0, #ffffff);
+    text-align: center;
     /* Canh giữa */
 }
 
@@ -254,6 +255,7 @@ button {
     /* Con trỏ chuột kiểu chỉ vào khi hover */
     border: none;
     border-radius: 25px;
+    font-weight: bold;
 }
 
 /* Hiệu ứng hover */

@@ -11,7 +11,7 @@ import { GlobalContext } from "./App"; // Import GlobalContext
 function PageFour() {
     const [receivedDataX, setReceivedDataX] = useState(""); // State lưu giá trị x
     const [setReceivedDataY] = useState(""); // State lưu giá trị y
-    const { globalVar4, setGlobalVar4, setGlobalVar5 } = useContext(GlobalContext);
+    const { globalVar4, setGlobalVar4, globalVar5, setGlobalVar5 } = useContext(GlobalContext);
     const { flag4, setFlag4 } = useContext(GlobalContext);
 
     const playAudio = () => {
@@ -57,10 +57,11 @@ function PageFour() {
     return (
         <div className="page-container">
             <div className="header-4">
-                <h1>Nhịp tim</h1>
+                <h1>Nhịp tim & Oxy máu</h1>
             </div>
             <div className="content">
                 <div className="square">{receivedDataX || globalVar4} bpm</div>
+                <div className="square">{receivedDataX || globalVar5} %</div>
             </div>
             <div className="audio-button-container">
                 <button onClick={playAudio} className="icon-button">
@@ -78,7 +79,7 @@ function PageFour() {
                         <FontAwesomeIcon icon={faArrowLeft} size="2x" />
                     </button>
                 </Link>
-                <Link to="/page-five">
+                <Link to="/page-seven">
                     <button>
                         <FontAwesomeIcon icon={faArrowRight} size="2x" />
                     </button>

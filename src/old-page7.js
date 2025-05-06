@@ -26,6 +26,7 @@ function PageSeven() {
         globalVar3, // Temp
         globalVar4, // Heart Rate
         globalVar5, // SpO2
+        globalVar6, // ECG
     } = useContext(GlobalContext);
 
     // Handle Firebase submission
@@ -37,7 +38,8 @@ function PageSeven() {
             weight: globalVar2, // Map Weight to globalVar2
             temp: globalVar3,   // Map Temp to globalVar3
             heart_rate: globalVar4, // Map Heart Rate to globalVar4
-            spo2: globalVar5,       // Map SpO2 to globalVar5 (renamed to spo2)
+            sp2: globalVar5,       // Map SpO2 to globalVar5
+            ECG: globalVar6,        // Map ECG to globalVar6
         };
 
         set(dataRef, formattedData)
