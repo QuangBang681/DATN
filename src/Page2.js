@@ -12,25 +12,15 @@ function PageTwo() {
     const [receivedData, setReceivedData] = useState("");
     const { globalVar2, setGlobalVar2 } = useContext(GlobalContext); // Access globalVar2
     const { flag2, setFlag2 } = useContext(GlobalContext);
+    const [isDisabled, setIsDisabled] = useState(false);
 
     const playAudio = () => {
         const audio = new Audio(soundFile); // Audio file path
         audio.play();
     };
 
-    // const sendSerialData = async () => {
-    //     try {
-    //         await fetch("http://localhost:5000/send-weight", { method: "POST" });
-
-    //         const response = await fetch("http://localhost:5000/listen");
-    //         const data = await response.json();
-    //         setReceivedData(data.data);
-    //     } catch (error) {
-    //         console.error("Lỗi giao tiếp với server:", error);
-    //     }
-    // };
-
     const sendSerialData = async () => {
+        setIsDisabled(true);
         try {
             await fetch("http://localhost:5000/send-weight", { method: "POST" });
 
@@ -41,6 +31,9 @@ function PageTwo() {
         } catch (error) {
             console.error("Lỗi giao tiếp với server:", error);
         }
+        setTimeout(() => {
+            setIsDisabled(false); // Kích hoạt lại nút sau 2.5 giây
+        }, 2500);
     };
 
     useEffect(() => {
@@ -70,7 +63,7 @@ function PageTwo() {
                 </button>
             </div>
             <div className="audio-button-container">
-                <button onClick={sendSerialData} className="serial-button">
+                <button onClick={sendSerialData} className="serial-button" disabled={isDisabled}>
                     Bắt đầu
                 </button>
             </div>

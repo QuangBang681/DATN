@@ -1,0 +1,53 @@
+.home-container {
+    background-image: url('open-page.png');
+    /* Replace with your custom image path */
+    background-size: 100%;
+    /* Scale the image to 45% */
+    background-position: center calc(50% + 1cm);
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Prevent repetition */
+    height: 100vh;
+    /* Full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Place button at the bottom */
+    align-items: center;
+    padding-bottom: 20px;
+    /* Add some space at the bottom */
+    margin: 0;
+    /* Reset margins to prevent extra space */
+    overflow: hidden;
+    /* Prevent scrollbars */
+    box-sizing: border-box;
+    /* Include padding and borders in element's dimensions */
+}
+
+
+.navigate-button {
+    font-family: 'Roboto', sans-serif;
+    padding: 25px 120px;
+    /* border: 2px solid black; */
+    /* Thêm viền đen */
+    border-radius: 45px;
+    /* Bo tròn góc */
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+/* Hiệu ứng khi hover */
+.navigate-button:hover {
+    transform: scale(1.1);
+    /* Phóng to nhẹ */
+    animation: shimmer 1s infinite;
+    /* Áp dụng ánh sáng nhấp nháy */
+}
+
+/* Hiệu ứng khi click */
+.navigate-button:active {
+    transform: scale(0.95);
+    /* Giảm nhẹ kích thước khi nhấn */
+}

@@ -42,10 +42,12 @@ function PageSeven() {
 
         set(dataRef, formattedData)
             .then(() => {
+                alert("Dữ liệu đã được gửi lên Firebase!");
+
                 // Redirect to homepage ("/") after 5 seconds
                 setTimeout(() => {
                     navigate("/");
-                }, 1500);
+                }, 2000);
             })
             .catch((error) => alert(`Lỗi: ${error.message}`));
     };

@@ -10,10 +10,9 @@ import { GlobalContext } from "./App"; // Import GlobalContext
 
 function PageFour() {
     const [receivedDataX, setReceivedDataX] = useState(""); // State lưu giá trị x
-    const [receivedDataY, setReceivedDataY] = useState(""); // State lưu giá trị y
+    const [setReceivedDataY] = useState(""); // State lưu giá trị y
     const { globalVar4, setGlobalVar4, globalVar5, setGlobalVar5 } = useContext(GlobalContext);
     const { flag4, setFlag4 } = useContext(GlobalContext);
-    const [isDisabled, setIsDisabled] = useState(false);
 
     const playAudio = () => {
         const audio = new Audio(soundFile); // Đường dẫn tới file âm thanh
@@ -21,7 +20,6 @@ function PageFour() {
     };
 
     const sendSerialData = async () => {
-        setIsDisabled(true);
         try {
             await fetch("http://localhost:5000/send-heart", { method: "POST" });
 
@@ -34,12 +32,14 @@ function PageFour() {
             setGlobalVar5(roundedAverageY);
             setReceivedDataX(roundedAverageX);
             setReceivedDataY(roundedAverageY);
+
+            // setGlobalVar4(data.averageX);
+            // setGlobalVar5(data.averageY);
+            // setReceivedDataX(data.averageX);
+            // setReceivedDataY(data.averageY);
         } catch (error) {
             console.error("Lỗi giao tiếp với server:", error);
         }
-        setTimeout(() => {
-            setIsDisabled(false); // Kích hoạt lại nút sau 2.5 giây
-        }, 2500);
     };
 
     useEffect(() => {
@@ -60,8 +60,8 @@ function PageFour() {
                 <h1>Nhịp tim & Oxy máu</h1>
             </div>
             <div className="content">
-                <div className="square">{receivedDataX || globalVar4} bpm</div>
-                <div className="square">{receivedDataY || globalVar5} %</div>
+                <div className="square">{globalVar4} bpm</div>
+                <div className="square">{globalVar5} %</div>
             </div>
             <div className="audio-button-container">
                 <button onClick={playAudio} className="icon-button">
@@ -69,7 +69,7 @@ function PageFour() {
                 </button>
             </div>
             <div className="audio-button-container">
-                <button onClick={sendSerialData} className="serial-button" disabled={isDisabled}>
+                <button onClick={sendSerialData} className="serial-button">
                     Bắt đầu
                 </button>
             </div>

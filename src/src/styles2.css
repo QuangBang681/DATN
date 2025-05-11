@@ -1,0 +1,336 @@
+/* Ngăn bôi đen cho toàn bộ trang */
+* {
+    user-select: none;
+    /* Ngăn chọn văn bản */
+    -webkit-user-select: none;
+    /* Hỗ trợ trên trình duyệt WebKit (Chrome, Safari) */
+    -moz-user-select: none;
+    /* Hỗ trợ trên trình duyệt Firefox */
+    -ms-user-select: none;
+    /* Hỗ trợ trên trình duyệt Internet Explorer/Edge cũ */
+}
+
+/* Container cho trang */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    background-image: url('bg-with-logo.png');
+    /* Replace with your custom image path */
+    background-size: 100%;
+    /* Scale the image to 45% */
+    background-position: center calc(50% + 1cm);
+    /* Center the image */
+    background-repeat: no-repeat;
+}
+
+
+.header-1 {
+    position: fixed;
+    top: 0;
+    /* Vị trí trên cùng */
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    /* Màu nền */
+    color: #029193;
+    /* Màu chữ */
+    text-align: center;
+    /* Canh giữa văn bản */
+    padding: 20px 0;
+    /* Khoảng cách bên trong */
+    font-size: 34px;
+    /* Kích thước chữ */
+    z-index: 1000;
+    /* Đảm bảo nằm trên các phần tử khác */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header-2 {
+    position: fixed;
+    top: 0;
+    /* Vị trí trên cùng */
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    /* Màu nền */
+    color: #029193;
+    /* Màu chữ */
+    text-align: center;
+    /* Canh giữa văn bản */
+    padding: 20px 0;
+    /* Khoảng cách bên trong */
+    font-size: 34px;
+    /* Kích thước chữ */
+    z-index: 1000;
+    /* Đảm bảo nằm trên các phần tử khác */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header-3 {
+    position: fixed;
+    top: 0;
+    /* Vị trí trên cùng */
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    /* Màu nền */
+    color: #029193;
+    /* Màu chữ */
+    text-align: center;
+    /* Canh giữa văn bản */
+    padding: 20px 0;
+    /* Khoảng cách bên trong */
+    font-size: 34px;
+    /* Kích thước chữ */
+    z-index: 1000;
+    /* Đảm bảo nằm trên các phần tử khác */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header-4 {
+    position: fixed;
+    top: 0;
+    /* Vị trí trên cùng */
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    /* Màu nền */
+    color: #029193;
+    /* Màu chữ */
+    text-align: center;
+    /* Canh giữa văn bản */
+    padding: 20px 0;
+    /* Khoảng cách bên trong */
+    font-size: 34px;
+    /* Kích thước chữ */
+    z-index: 1000;
+    /* Đảm bảo nằm trên các phần tử khác */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header-5 {
+    position: fixed;
+    top: 0;
+    /* Vị trí trên cùng */
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    /* Màu nền */
+    color: #029193;
+    /* Màu chữ */
+    text-align: center;
+    /* Canh giữa văn bản */
+    padding: 20px 0;
+    /* Khoảng cách bên trong */
+    font-size: 34px;
+    /* Kích thước chữ */
+    z-index: 1000;
+    /* Đảm bảo nằm trên các phần tử khác */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header-6 {
+    position: fixed;
+    top: 0;
+    /* Vị trí trên cùng */
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    /* Màu nền */
+    color: #029193;
+    /* Màu chữ */
+    text-align: center;
+    /* Canh giữa văn bản */
+    padding: 20px 0;
+    /* Khoảng cách bên trong */
+    font-size: 34px;
+    /* Kích thước chữ */
+    z-index: 1000;
+    /* Đảm bảo nằm trên các phần tử khác */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header-7 {
+    position: fixed;
+    top: 0;
+    /* Vị trí trên cùng */
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    /* Màu nền */
+    color: #029193;
+    /* Màu chữ */
+    text-align: center;
+    /* Canh giữa văn bản */
+    padding: 20px 0;
+    /* Khoảng cách bên trong */
+    font-size: 34px;
+    /* Kích thước chữ */
+    z-index: 1000;
+    /* Đảm bảo nằm trên các phần tử khác */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Nội dung ở giữa màn hình */
+.content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.content-1 {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.content-2 {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+
+/* Ô vuông hiển thị chỉ số */
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    /* Nền xám */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    color: #333;
+    border: 2px solid #aaa;
+    margin: 40px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.7);
+    background: linear-gradient(145deg, #e0e0e0, #ffffff);
+    text-align: center;
+    /* Canh giữa */
+}
+
+
+/* Container cho các nút ở dưới đáy màn hình */
+#button-container {
+    position: fixed;
+    bottom: 200px;
+    /* Cách mép dưới màn hình 20px */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    /* Căn chỉnh nút hai bên */
+    padding: 15px 25px;
+    /* Cách mép trái và phải */
+}
+
+/* Nút bấm */
+button {
+    font-family: 'Roboto', sans-serif;
+    padding: 120px 40px;
+    /* Tăng kích thước nút */
+    border: 2px solid gray;
+    /* Loại bỏ viền */
+    border-radius: 5px;
+    /* Bo tròn góc */
+    font-size: 20px;
+    /* Tăng kích thước chữ */
+    background-color: #029193;
+    /* Màu nền */
+    color: white;
+    /* Màu chữ */
+    cursor: pointer;
+    /* Con trỏ chuột kiểu chỉ vào khi hover */
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* Hiệu ứng hover */
+button:hover {
+    background-color: #555;
+    /* Đổi màu nền khi hover */
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Nút bị vô hiệu hoá */
+button:disabled {
+    opacity: 0.3;
+    /* Làm mờ nút */
+    cursor: not-allowed;
+    /* Hiển thị con trỏ không hoạt động */
+}
+
+.audio-button-container {
+    display: flex;
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    margin-top: 30px;
+    /* Khoảng cách phía trên */
+    position: relative;
+    /* Đảm bảo vị trí tương đối */
+    gap: 20px;
+    flex-direction: row;
+}
+
+.audio-button-container button {
+    width: 250px;
+    /* Đặt kích thước ngang bằng nhau */
+    height: 70px;
+    /* Đặt kích thước dọc bằng nhau */
+    padding: 10px 20px;
+    font-size: 32px;
+    font-weight: bold;
+    background-color: #007BFF;
+    /* Màu nền */
+    color: white;
+    /* Màu chữ */
+    border: 2px solid gray;
+    /* Bỏ viền */
+    border-radius: 25px;
+    /* Bo góc */
+    cursor: pointer;
+    /* Hiển thị kiểu con trỏ */
+    transition: background-color 0.3s ease;
+    /* Hiệu ứng khi di chuột */
+}
+
+.audio-button-container button:hover {
+    background-color: #0056b3;
+    /* Màu khi di chuột qua */
+}
+
+
+.icon-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #007BFF;
+    z-index: 10;
+}
+
+.serial-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #007BFF;
+    z-index: 10;
+    margin-bottom: 15px;
+}
